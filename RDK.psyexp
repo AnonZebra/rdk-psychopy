@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="deg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="RDK_1" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <DotsComponent name="dots_trial">
+        <Param name="coherence" updates="set every repeat" val="$thisTrial_loop" valType="code"/>
+        <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="dir" updates="constant" val="0" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="dotLife" updates="None" val="4" valType="code"/>
+        <Param name="dotSize" updates="constant" val="8.378" valType="code"/>
+        <Param name="durationEstim" updates="None" val="0.6" valType="code"/>
+        <Param name="fieldPos" updates="constant" val="(0.0, 0.0)" valType="code"/>
+        <Param name="fieldShape" updates="constant" val="square" valType="str"/>
+        <Param name="fieldSize" updates="constant" val="11.5996" valType="code"/>
+        <Param name="nDots" updates="constant" val="200" valType="code"/>
+        <Param name="name" updates="None" val="dots_trial" valType="code"/>
+        <Param name="noiseDots" updates="None" val="direction" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="refreshDots" updates="None" val="repeat" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="signalDots" updates="None" val="same" valType="str"/>
+        <Param name="speed" updates="constant" val="0.1" valType="code"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="36" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </DotsComponent>
+      <KeyboardComponent name="key_resp_trial">
+        <Param name="allowedKeys" updates="constant" val="'up', 'down', 'left', 'right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$dir_corr" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_trial" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code_trial">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# MANUALLY ADDED CODE: rand_selector is used to randomly select an angle &amp;#10;# for the dots' coherent direction, and further down select the corresponding correct&amp;#10;# response.&amp;#10;rand_selector = randint(0, 4) &amp;#10;dots_trial.setDir([0, 90, 180, 270][rand_selector]) # uses rand_selector to select an angle randomly&amp;#10;dir_corr = ['right', 'up', 'left', 'down'][rand_selector] # uses rand_selector to specify the correct response" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trial_loop.addOtherData('key_resp_trial.correct', key_resp_trial.corr)&amp;#10;#if trial_loop.thisTrialN + 1 == trial_loop.nTrials:&amp;#10;#    run_loop.addData(&quot;run_end_coherence_value&quot;, thisTrial_loop)&amp;#10;#" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_trial" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ready_trial">
+      <TextComponent name="ready_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="ready_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Den gemensamma riktningen var nedåt.&amp;#10;&amp;#10;Ibland kan det vara väldigt svårt att se vartåt prickarna rör sig! Du kan då gissa.&amp;#10;&amp;#10;Så snart du gett ett svar så kommer nästa film med prickar att visas. Testet fortsätter så och avslutas automatiskt när du är klar.&amp;#10;&amp;#10;På slutet av testet visas din testpoäng.&amp;#10;&amp;#10;När du trycker på mellanslag så startas testet genast. Prickarna visas en väldigt kort tid, så håll gärna handen redo vid piltangenterna." valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="ready_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="ready_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="end_screen">
+      <TextComponent name="end_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="end_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Tack! Vänligen vänta på att försöksledaren kommer och hjälper dig." valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="inter_trial_500ms">
+      <TextComponent name="iti_placeholder_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="0.5" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="3" valType="code"/>
+        <Param name="name" updates="None" val="iti_placeholder_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="30" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="instructions_screen_4"/>
+    <Routine name="instructions_screen_3">
+      <TextComponent name="instruction_3_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="instruction_3_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="I testet kommer en del av prickarna röra sig i en gemensam riktning, precis som i exemplet.&amp;#10;&amp;#10;Din uppgift är att använda piltangenterna på tangentbordet för att ange åt vilket håll prickarna rör sig: åt vänster, höger, uppåt eller neråt. Enbart dessa fyra riktningar är möjliga. Försök att trycka så snabbt du ser den gemensamma riktningen.&amp;#10;&amp;#10;På nästa skärm får du ett exempel. Försök att se vartåt prickarna går och tryck den motsvarande piltangenten.&amp;#10;&amp;#10;Tryck blanksteg för att komma till exemplet." valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="instruction_3_keyboard">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="instruction_3_keyboard" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instructions_screen4">
+      <TextComponent name="instructions_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="instructions_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0.6" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="36" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Vilken gemensam riktning tror du att en del av prickarna hade? Tryck den motsvarande piltangenten." valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="instructions_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'up', 'right', 'left', 'down'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="instructions_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="0.6" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="36" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <DotsComponent name="instructions_dots">
+        <Param name="coherence" updates="set every repeat" val=".8" valType="code"/>
+        <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="dir" updates="constant" val="270" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="dotLife" updates="None" val="4" valType="code"/>
+        <Param name="dotSize" updates="constant" val="8.378" valType="code"/>
+        <Param name="durationEstim" updates="None" val="0.6" valType="code"/>
+        <Param name="fieldPos" updates="constant" val="(0.0, 0)" valType="code"/>
+        <Param name="fieldShape" updates="constant" val="square" valType="str"/>
+        <Param name="fieldSize" updates="constant" val="11.5996" valType="code"/>
+        <Param name="nDots" updates="constant" val="200" valType="code"/>
+        <Param name="name" updates="None" val="instructions_dots" valType="code"/>
+        <Param name="noiseDots" updates="None" val="direction" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="refreshDots" updates="None" val="repeat" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="signalDots" updates="None" val="same" valType="str"/>
+        <Param name="speed" updates="constant" val="0.1" valType="code"/>
+        <Param name="startEstim" updates="None" val="0" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="36" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </DotsComponent>
+    </Routine>
+    <Routine name="instructions_screen_1">
+      <TextComponent name="welcome_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="welcome_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instruktioner för rörelsetest&amp;#10;&amp;#10;Det här experimentet mäter din förmåga till att uppfatta rörelser. Det tar cirka fem minuter. Läs vänligen instruktionerna noggrannt!&amp;#10;&amp;#10;I det här testet kommer du att se korta filmer av prickar som rör sig.&amp;#10;&amp;#10;Tryck på tangenten blanksteg (även kallad mellanslag eller space) för att se hur prickarna kan röra sig.&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="welcome_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="welcome_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instructions_screen_2">
+      <TextComponent name="instructions_text_2">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.8" valType="code"/>
+        <Param name="name" updates="None" val="instructions_text_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 5)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Nedanför ser du ett exempel. I själva testet kommer du bara att se prickarna en kort stund, och de kommer att röra sig snabbare.&amp;#10;&amp;#10;En del av prickarna rör sig mot en gemensam riktning, nämligen vänster. De andra prickarna rör sig åt olika, slumpmässiga håll.&amp;#10;&amp;#10;Tryck på blanksteg för ytterligare instruktioner." valType="str"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="instructions_key_resp_2">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="instructions_key_resp_2" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <DotsComponent name="instructions_dots_2">
+        <Param name="coherence" updates="set every repeat" val=".5" valType="code"/>
+        <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="dir" updates="constant" val="180" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="dotLife" updates="None" val="12" valType="code"/>
+        <Param name="dotSize" updates="constant" val="8.378" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fieldPos" updates="constant" val="(0.0, -5)" valType="code"/>
+        <Param name="fieldShape" updates="constant" val="square" valType="str"/>
+        <Param name="fieldSize" updates="constant" val="9" valType="code"/>
+        <Param name="nDots" updates="constant" val="200" valType="code"/>
+        <Param name="name" updates="None" val="instructions_dots_2" valType="code"/>
+        <Param name="noiseDots" updates="None" val="direction" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="refreshDots" updates="None" val="repeat" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="signalDots" updates="None" val="same" valType="str"/>
+        <Param name="speed" updates="constant" val=".02" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </DotsComponent>
+    </Routine>
+    <Routine name="store_run_threshold">
+      <CodeComponent name="code_store_threshold">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="run_loop.addOtherData(&quot;run_end_coherence_value&quot;, thisTrial_loop);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="run_loop.addData(&quot;run_end_coherence_value&quot;, thisTrial_loop)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_store_threshold" valType="code"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instructions_screen_1"/>
+    <Routine name="instructions_screen_2"/>
+    <Routine name="instructions_screen_3"/>
+    <Routine name="instructions_screen4"/>
+    <Routine name="ready_trial"/>
+    <LoopInitiator loopType="TrialHandler" name="run_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="name" updates="None" val="run_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="StairHandler" name="trial_loop">
+      <Param name="N down" updates="None" val="1" valType="code"/>
+      <Param name="N reversals" updates="None" val="0" valType="code"/>
+      <Param name="N up" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="staircase" valType="str"/>
+      <Param name="max value" updates="None" val="1" valType="code"/>
+      <Param name="min value" updates="None" val="0" valType="code"/>
+      <Param name="nReps" updates="None" val="5" valType="code"/>
+      <Param name="name" updates="None" val="trial_loop" valType="code"/>
+      <Param name="start value" updates="None" val="0.5" valType="code"/>
+      <Param name="step sizes" updates="None" val="0.1" valType="code"/>
+      <Param name="step type" updates="None" val="log" valType="str"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <Routine name="inter_trial_500ms"/>
+    <LoopTerminator name="trial_loop"/>
+    <Routine name="store_run_threshold"/>
+    <LoopTerminator name="run_loop"/>
+    <Routine name="end_screen"/>
+  </Flow>
+</PsychoPy2experiment>

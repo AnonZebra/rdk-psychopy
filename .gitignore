@@ -1,0 +1,7 @@
+info_Tessa/
+__pycache__
+data/
+RDK_my_notes.txt
+RDK_my_notes
+*.py
+.git.backup
