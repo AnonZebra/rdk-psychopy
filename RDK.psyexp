@@ -474,7 +474,7 @@
       <Param name="loopType" updates="None" val="staircase" valType="str"/>
       <Param name="max value" updates="None" val="1" valType="code"/>
       <Param name="min value" updates="None" val="0" valType="code"/>
-      <Param name="nReps" updates="None" val="5" valType="code"/>
+      <Param name="nReps" updates="None" val="60" valType="code"/>
       <Param name="name" updates="None" val="trial_loop" valType="code"/>
       <Param name="start value" updates="None" val="0.5" valType="code"/>
       <Param name="step sizes" updates="None" val="0.1" valType="code"/>
