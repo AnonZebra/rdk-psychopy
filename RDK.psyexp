@@ -87,14 +87,14 @@
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# MANUALLY ADDED CODE: rand_selector is used to randomly select an angle &amp;#10;# for the dots' coherent direction, and further down select the corresponding correct&amp;#10;# response.&amp;#10;rand_selector = randint(0, 4) &amp;#10;dots_trial.setDir([0, 90, 180, 270][rand_selector]) # uses rand_selector to select an angle randomly&amp;#10;dir_corr = ['right', 'up', 'left', 'down'][rand_selector] # uses rand_selector to specify the correct response" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# rand_selector is used to randomly select an angle &amp;#10;# for the dots' coherent direction, and further down select the corresponding correct&amp;#10;# response.&amp;#10;rand_selector = randint(0, 4) &amp;#10;dots_trial.setDir([0, 90, 180, 270][rand_selector]) # uses rand_selector to select an angle randomly&amp;#10;dir_corr = ['right', 'up', 'left', 'down'][rand_selector] # uses rand_selector to specify the correct response" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Py" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trial_loop.addOtherData('key_resp_trial.correct', key_resp_trial.corr)&amp;#10;#if trial_loop.thisTrialN + 1 == trial_loop.nTrials:&amp;#10;#    run_loop.addData(&quot;run_end_coherence_value&quot;, thisTrial_loop)&amp;#10;#" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# trial_loop.addOtherData('key_resp_trial.correct', key_resp_trial.corr)&amp;#10;trial_loop.addOtherData('correct_direction', dir_corr)&amp;#10;trial_loop.addOtherData('key_resp_trial.keys', key_resp_trial.keys)" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_trial" valType="code"/>
       </CodeComponent>
