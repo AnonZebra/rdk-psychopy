@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
+<PsychoPy2experiment encoding="utf-8" version="2021.1.2">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -13,7 +13,7 @@
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
-    <Param name="Monitor" updates="None" val="$subicwait_mon" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
     <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
@@ -25,7 +25,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="deg" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1680, 1050]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -39,6 +39,7 @@
         <Param name="coherence" updates="set every repeat" val="$thisTrial_loop" valType="code"/>
         <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="dir" updates="constant" val="0" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="dotLife" updates="None" val="4" valType="code"/>
@@ -103,6 +104,7 @@
       <TextComponent name="ready_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -164,6 +166,7 @@
       <TextComponent name="end_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -190,6 +193,7 @@
       <TextComponent name="iti_placeholder_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="0.5" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -217,6 +221,7 @@
       <TextComponent name="instruction_3_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -261,6 +266,7 @@
       <TextComponent name="instructions_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -304,6 +310,7 @@
         <Param name="coherence" updates="set every repeat" val=".8" valType="code"/>
         <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="dir" updates="constant" val="270" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="dotLife" updates="None" val="4" valType="code"/>
@@ -333,6 +340,7 @@
       <TextComponent name="welcome_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -372,23 +380,6 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="code_monitor_setup">
-        <Param name="Before Experiment" updates="constant" val="# import psychopy module for generating&amp;#10;# monitor instances.&amp;#10;from psychopy import monitors&amp;#10;&amp;#10;# create monitor instance for SUBIC outside scanner &amp;#10;# (waiting room) monitor&amp;#10;subicwait_mon = monitors.Monitor(&amp;#10;    name='subic_waitroom_monitor',&amp;#10;    width=50.92,&amp;#10;    distance=60,&amp;#10;    notes='Waiting room monitor at SUBIC.')&amp;#10;&amp;#10;# set the pixel width/height of the SUBIC outside&amp;#10;# scanner monitor&amp;#10;subicwait_mon.setSizePix([1920, 1080])&amp;#10;" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="import {monitors} from 'psychopy';&amp;#10;var example_mon;&amp;#10;example_mon = new monitors.Monitor({&quot;name&quot;: &quot;example_monitor&quot;, &quot;width&quot;: 49, &quot;distance&quot;: 30, &quot;notes&quot;: &quot;Example monitor, replace specifications here.&quot;});&amp;#10;example_mon.setSizePix([1280, 1024]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Py" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_monitor_setup" valType="code"/>
-      </CodeComponent>
       <CodeComponent name="code_instructions1_hidemouse">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -411,6 +402,7 @@
       <TextComponent name="instructions_text_2">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -454,6 +446,7 @@
         <Param name="coherence" updates="set every repeat" val=".5" valType="code"/>
         <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="dir" updates="constant" val="180" valType="code"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="dotLife" updates="None" val="12" valType="code"/>
