@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -7,13 +7,13 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
-    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Monitor" updates="None" val="$subicwait_mon" valType="str"/>
     <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
@@ -25,11 +25,11 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="deg" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1680, 1050]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
-    <Param name="expName" updates="None" val="RDK_1" valType="str"/>
+    <Param name="expName" updates="None" val="MCT" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
     <Param name="logging level" updates="None" val="debug" valType="code"/>
   </Settings>
@@ -84,7 +84,7 @@
       <CodeComponent name="code_trial">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# initialize variable for counting the number of correct responses&amp;#10;correct_counter = 0" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# rand_selector is used to randomly select an angle &amp;#10;# for the dots' coherent direction, and further down select the corresponding correct&amp;#10;# response.&amp;#10;rand_selector = randint(0, 4) &amp;#10;dots_trial.setDir([0, 90, 180, 270][rand_selector]) # uses rand_selector to select an angle randomly&amp;#10;dir_corr = ['right', 'up', 'left', 'down'][rand_selector] # uses rand_selector to specify the correct response" valType="extendedCode"/>
@@ -94,7 +94,7 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# trial_loop.addOtherData('key_resp_trial.correct', key_resp_trial.corr)&amp;#10;trial_loop.addOtherData('correct_direction', dir_corr)&amp;#10;trial_loop.addOtherData('key_resp_trial.keys', key_resp_trial.keys)" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# trial_loop.addOtherData('key_resp_trial.correct', key_resp_trial.corr)&amp;#10;trial_loop.addOtherData('correct_direction', dir_corr)&amp;#10;trial_loop.addOtherData('key_resp_trial.keys', key_resp_trial.keys)&amp;#10;&amp;#10;# add 1 to counter if response was correct&amp;#10;if key_resp_trial.keys == dir_corr:&amp;#10;    correct_counter += 1" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_trial" valType="code"/>
       </CodeComponent>
@@ -120,9 +120,9 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Den gemensamma riktningen var nedåt.&amp;#10;&amp;#10;Ibland kan det vara väldigt svårt att se vartåt prickarna rör sig! Du kan då gissa.&amp;#10;&amp;#10;Så snart du gett ett svar så kommer nästa film med prickar att visas. Testet fortsätter så och avslutas automatiskt när du är klar.&amp;#10;&amp;#10;På slutet av testet visas din testpoäng.&amp;#10;&amp;#10;När du trycker på mellanslag så startas testet genast. Prickarna visas en väldigt kort tid, så håll gärna handen redo vid piltangenterna." valType="str"/>
+        <Param name="text" updates="constant" val="Den gemensamma riktningen var nedåt.&amp;#10;&amp;#10;Det kan vara väldigt svårt att se vartåt prickarna rör sig! Filmen visas bara en mycket kort stund. Försök att svara så snabbt du kan; du kan också gissa.&amp;#10;&amp;#10;Så snart du gett ett svar så kommer nästa film med prickar att visas. Testet fortsätter så och avslutas automatiskt när du är klar.&amp;#10;&amp;#10;På slutet av testet visas din testpoäng.&amp;#10;&amp;#10;När du trycker på mellanslag så startas testet genast. Prickarna visas en väldigt kort tid, så håll gärna handen redo vid piltangenterna." valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="ready_key_resp">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
@@ -144,6 +144,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="end_screen">
+      <CodeComponent name="end_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="end_msg = &quot;Tack!\nV\u00e4nligen mata in ditt deltagar-ID f\u00f6r n\u00e4sta test.&quot;;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# DISABLED&amp;#10;# prior study had feedback at end, but&amp;#10;# for synesthesia project it was decided&amp;#10;# that the feedback might just be demotivating&amp;#10;# since the task is so hard&amp;#10;#end_msg = (&amp;#10;#    'Tack!\n' &amp;#10;#    f'Du fick {correct_counter} poäng av 180 möjliga.\n'&amp;#10;#    'Vänligen vänta på att försöksledaren kommer och hjälper dig.'&amp;#10;#)&amp;#10;&amp;#10;#end_msg = (&amp;#10;#    'Tack för att du genomförde testet!\n'&amp;#10;#    'Vänligen vänta på att försöksledaren kommer och hjälper dig.'&amp;#10;#)&amp;#10;&amp;#10;end_msg = (&amp;#10;    'Tack!\n'&amp;#10;    'Vänligen mata in ditt deltagar-ID för nästa test.'&amp;#10;)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="end_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="end_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -164,9 +181,9 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="3" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Tack! Vänligen vänta på att försöksledaren kommer och hjälper dig." valType="str"/>
+        <Param name="text" updates="set every repeat" val="$end_msg" valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
     </Routine>
     <Routine name="inter_trial_500ms">
@@ -217,9 +234,9 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="I testet kommer en del av prickarna röra sig i en gemensam riktning, precis som i exemplet.&amp;#10;&amp;#10;Din uppgift är att använda piltangenterna på tangentbordet för att ange åt vilket håll prickarna rör sig: åt vänster, höger, uppåt eller neråt. Enbart dessa fyra riktningar är möjliga. Försök att trycka så snabbt du ser den gemensamma riktningen.&amp;#10;&amp;#10;På nästa skärm får du ett exempel. Försök att se vartåt prickarna går och tryck den motsvarande piltangenten.&amp;#10;&amp;#10;Tryck blanksteg för att komma till exemplet." valType="str"/>
+        <Param name="text" updates="constant" val="I testet kommer en del av prickarna röra sig i en gemensam riktning, precis som i exemplet.&amp;#10;&amp;#10;Din uppgift är att använda piltangenterna på tangentbordet för att ange åt vilket håll prickarna rör sig: åt vänster, höger, uppåt eller neråt. Enbart dessa fyra riktningar är möjliga. Försök att reagera så snabbt som möjligt.&amp;#10;&amp;#10;På nästa skärm får du ett exempel. Försök att se vartåt prickarna går och tryck den motsvarande piltangenten.&amp;#10;&amp;#10;Tryck blanksteg för att komma till exemplet." valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="instruction_3_keyboard">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
@@ -263,7 +280,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Vilken gemensam riktning tror du att en del av prickarna hade? Tryck den motsvarande piltangenten." valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="instructions_key_resp">
         <Param name="allowedKeys" updates="constant" val="'up', 'right', 'left', 'down'" valType="code"/>
@@ -335,7 +352,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Instruktioner för rörelsetest&amp;#10;&amp;#10;Det här experimentet mäter din förmåga till att uppfatta rörelser. Det tar cirka fem minuter. Läs vänligen instruktionerna noggrannt!&amp;#10;&amp;#10;I det här testet kommer du att se korta filmer av prickar som rör sig.&amp;#10;&amp;#10;Tryck på tangenten blanksteg (även kallad mellanslag eller space) för att se hur prickarna kan röra sig.&amp;#10;&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="welcome_key_resp">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
@@ -355,6 +372,40 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code_monitor_setup">
+        <Param name="Before Experiment" updates="constant" val="# import psychopy module for generating&amp;#10;# monitor instances.&amp;#10;from psychopy import monitors&amp;#10;&amp;#10;# create monitor instance for SUBIC outside scanner &amp;#10;# (waiting room) monitor&amp;#10;subicwait_mon = monitors.Monitor(&amp;#10;    name='subic_waitroom_monitor',&amp;#10;    width=50.92,&amp;#10;    distance=60,&amp;#10;    notes='Waiting room monitor at SUBIC.')&amp;#10;&amp;#10;# set the pixel width/height of the SUBIC outside&amp;#10;# scanner monitor&amp;#10;subicwait_mon.setSizePix([1920, 1080])&amp;#10;" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="import {monitors} from 'psychopy';&amp;#10;var example_mon;&amp;#10;example_mon = new monitors.Monitor({&quot;name&quot;: &quot;example_monitor&quot;, &quot;width&quot;: 49, &quot;distance&quot;: 30, &quot;notes&quot;: &quot;Example monitor, replace specifications here.&quot;});&amp;#10;example_mon.setSizePix([1280, 1024]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_monitor_setup" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="code_instructions1_hidemouse">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="win.mouseVisible = false;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# hide the mouse cursor (since the mouse&amp;#10;# isn't used at all during this experiment)&amp;#10;win.mouseVisible = False" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_instructions1_hidemouse" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="instructions_screen_2">
       <TextComponent name="instructions_text_2">
@@ -379,7 +430,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Nedanför ser du ett exempel. I själva testet kommer du bara att se prickarna en kort stund, och de kommer att röra sig snabbare.&amp;#10;&amp;#10;En del av prickarna rör sig mot en gemensam riktning, nämligen vänster. De andra prickarna rör sig åt olika, slumpmässiga håll.&amp;#10;&amp;#10;Tryck på blanksteg för ytterligare instruktioner." valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="25" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="27" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="instructions_key_resp_2">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
@@ -467,7 +518,7 @@
     </LoopInitiator>
     <LoopInitiator loopType="StairHandler" name="trial_loop">
       <Param name="N down" updates="None" val="1" valType="code"/>
-      <Param name="N reversals" updates="None" val="0" valType="code"/>
+      <Param name="N reversals" updates="None" val="1" valType="code"/>
       <Param name="N up" updates="None" val="1" valType="code"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
