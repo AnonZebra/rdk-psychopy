@@ -1,4 +1,5 @@
-![RDK task experiment start example](./example_exp_start.gif)
+<img width="400px" src="./example_exp_start.gif" alt="RDK task experiment start example">
+
 # PsychoPy Experiment: Motion Coherence / Random Dot Kinematogram Task
 This is a project which implements a [Random Dot Kinematogram](http://lcni-3.uoregon.edu/phenowiki/index.php/Random-dot_Kinematograms) task in [PsychoPy](https://psychopy.org/), using PsychoPy's 'standalone' version Builder tool. The task instructions are in Swedish, but this can be modified (see below). 
 
