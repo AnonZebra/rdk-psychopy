@@ -19,8 +19,11 @@ Burghoorn, Floor, Mark Dingemanse, Rob van Lier, and Tessa M. van Leeuwen. “Th
 
 An example of Tessa van Leeuwen & co's previous task can be found [here](https://www.socsci.ru.nl/wilberth/stimuli/stairHandlerForm.html). van Leeuwen provided valuable feedback and input during the development process. 
 
-## Referencing this task
+## Attribution
 If you use this task in your research, please shortly acknowledge this somewhere in related articles with a text like "The task used in this study was based on a PsychoPy task developed by Lowe Wilsson at Karolinska Institutet as part of Janina Neufeld's research, with support from Tessa van Leeuwen.". To make it easier for other researchers to find the task, it would be best if you could somehow include a link (eg in an 'additional material' section) to this github repository, but if journal routines prohibit this then just an acknowledgement similar to the above will do.
+
+## (not) Running the experiment online
+This PsychoPy implementation of the Pattern Glare Test was only developed for being used locally, i.e. not online. It's possible that you might convert this implementation to run online (by working with PsychoPy to convert to a JavaScript version), but this requires some programming knowledge. If you make an online version, you're very welcome to send an e-mail to datalowe-at-posteo.de so that I can add a link to your work here.
 
 ## Feedback
 If you notice any errors or want to suggest improvements then please either start an issue or a pull request (PR) here on Github, or contact me at datalowe@posteo.de.
